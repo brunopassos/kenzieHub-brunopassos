@@ -1,10 +1,10 @@
 import logo from "../../assets/logo.svg";
 import { StyledImg, Container } from "./styles";
 
-function Logo() {
+function Logo({margin}) {
     return (
         <Container>
-            <StyledImg src={logo} alt="" />
+            <StyledImg margin={margin} src={logo} alt="" />
         </Container>
     );
 }

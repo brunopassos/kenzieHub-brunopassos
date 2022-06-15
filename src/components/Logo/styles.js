@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const StyledImg = styled.img`
-    margin: 0 auto;
+
+    margin: ${(props) => props.margin ? props.margin : "0 auto"} ;
 `
 
 export const Container = styled.div`

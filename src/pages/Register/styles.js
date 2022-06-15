@@ -6,7 +6,6 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-evenly;
   width: 80vw;
-  height: 450px;
   background: var(--gray3);
   box-shadow: 0px 3.20867px 32.0867px -8.02168px rgba(0, 0, 0, 0.25);
   border-radius: 3.20867px;
@@ -20,30 +19,17 @@ export const Container = styled.div`
     font-family: "Inter";
     font-weight: 700;
     font-size: 14.439px;
-  }
-
-  div{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-
-    button {
-    width: 265px;
-    height: 38.5px;
-    font-family: "Inter";
-    font-weight: 500;
-    font-size: 12.8347px;
-    margin-bottom: 27px;
+    margin-top: 12px;
+    margin-bottom: 5px;
   }
 
   span {
-    font-family: "Inter";
-    font-weight: 600;
-    font-size: 9.62602px;
     color: var(--gray1);
-    margin-bottom: 26px;
-  }
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9.59437px;
+    margin-bottom: 22px;
   }
 `;
 
@@ -90,4 +76,31 @@ export const Content = styled.form`
     color: var(--gray1);
     margin-bottom: 26px;
   }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
+
+export const StyledHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  button {
+    width: 79.54px;
+    height: 31.95px;
+    border-radius: 4px;
+    font-family: "Inter";
+    font-weight: 600;
+    font-size: 9.59437px;
+    margin-bottom: 25px;
+  }
+`;
+
+export const MainContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`

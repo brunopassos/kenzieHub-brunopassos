@@ -33,7 +33,7 @@ function Home() {
             <Logo/>
             <Container>
                     <h2>Login</h2>
-                <Content onSubmit={ handleSubmit(onSubmitFunction)}>                    
+                <Content onSubmit={handleSubmit(onSubmitFunction)}>                    
                     <Input error={errors.email?.message} register={register} name="email" placeholderText="Digite o seu email" children="Email" type="text"/>
                     <Input error={errors.password?.message} register={register} name="password" placeholderText="Digite a sua senha" children="Senha" type="password"/>
                     <Button type="submit" bgColor={"--color-primary"}  >Entrar</Button>
