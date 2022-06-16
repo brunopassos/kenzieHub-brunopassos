@@ -27,10 +27,10 @@ export const CreateGlobalStyle = createGlobalStyle`
     body{
         background: var(--background);
         display: flex;
-        flex-direction: colum;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
         height: 100vh;
+        padding-top: 50px;
     }
 
     button{

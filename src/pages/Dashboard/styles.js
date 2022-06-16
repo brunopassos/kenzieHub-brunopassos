@@ -23,6 +23,13 @@ export const Container = styled.div`
       margin-bottom: 15px;
     }
   }
+
+  span{
+    font-family: "Inter";
+    color: var(--gray1);
+    font-weight: 400;
+    font-size: 12px;
+  }
 `;
 
 export const Header = styled.section`
@@ -49,6 +56,24 @@ export const Header = styled.section`
 `;
 
 export const Content = styled.div`
+  span {
+    font-family: "Inter";
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--gray0);
+  }
 
+  span + button {
+    border-radius: 4px;
+    width: 32px;
+    height: 32px;
+    background: var(--gray3);
+    border: none;
 
+    svg {
+      width: 32px;
+      height: 32px;
+      color: var(--white);
+    }
+  }
 `;
