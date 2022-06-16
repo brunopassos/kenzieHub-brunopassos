@@ -6,7 +6,7 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup"
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
-import Select from "../../components/Select";
+//import Select from "../../components/Select";
 
 function Register() {
 
@@ -30,11 +30,9 @@ function Register() {
         resolver: yupResolver(schema),
     });
 
-    function onSubmitFunction(e, data){
-        e.preventDefault();
+    function onSubmitFunction(data){        
         console.log(data);
     }
-
 
     return ( 
         <MainContainer>
@@ -45,15 +43,20 @@ function Register() {
             <Container >
                     <h2>Crie sua conta</h2>
                     <span>Rápido e grátis, vamos nessa</span>
-                <Content onSubmit={(event)=> handleSubmit(onSubmitFunction(event))}>   
+                <Content onSubmit={handleSubmit(onSubmitFunction)}>   
                     <Input error={errors.name?.message} register={register} name="name" placeholderText="Digite aqui o seu nome" children="Nome" type="text"/>             
                     <Input error={errors.email?.message} register={register} name="email" placeholderText="Digite aqui o seu email" children="Email" type="text"/>
                     <Input error={errors.password?.message} register={register} name="password" placeholderText="Digite aqui a sua senha" children="Senha" type="password"/>
                     <Input error={errors.confirmPassword?.message} register={register} name="confirmPassword" placeholderText="Confirme a seua senha" children="Confirme a senha" type="password"/>
                     <Input error={errors.bio?.message} register={register} name="bio" placeholderText="Fale um pouco sobre você" children="Bio" type="text"/>
                     <Input error={errors.contact?.message} register={register} name="contact" placeholderText="Opção de contato" children="Contato" type="text"/>
-                    <Select register={register} name="course_module" error={errors.course_module?.message}/>
-                    <button type="submit">Cadastrar</button>
+                    <select {...register("course_module")}>
+                        <option value="M1">M1</option>
+                        <option value="M2">M2</option>
+                        <option value="M3">M3</option>
+                    </select>
+                    {/* <Select register={register} name="course_module" error={errors.course_module?.message}/> */}
+                    <Button type="submit" bgColor={"--color-primary-Negative"}>Cadastrar</Button>
                 </Content>
             
             </Container>
