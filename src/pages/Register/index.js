@@ -6,6 +6,8 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup"
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
+import api from "../../services/api";
+import { toast } from "react-toastify";
 //import Select from "../../components/Select";
 
 function Register() {
@@ -21,7 +23,7 @@ function Register() {
         email: yup.string().required("Campo obrigatório").email(),
         password: yup.string().required("Campo obrigatório"),
         confirmPassword: yup.string().required("Campo obrigatório").oneOf([yup.ref("password")],"As senhas não conferem"),
-        bio: yup.string().required("Campo obrigatório").min(20, "Mínimo de 20 caracteres."),
+        bio: yup.string().required("Campo obrigatório"),
         contact: yup.string().required("Campo obrigatório"),
         course_module: yup.string().required("Campo obrigatório")
     })
@@ -31,7 +33,18 @@ function Register() {
     });
 
     function onSubmitFunction(data){        
-        console.log(data);
+        console.log(data)
+
+        api
+        .post("/users", data)
+        .then((resp) => {
+            toast.success("Sucesso ao criar a conta!");
+            return history.push("/")
+        })
+        .catch((err) => {
+            console.log(err)
+            toast.error("Erro ao criar a conta!");
+        });
     }
 
     return ( 
@@ -51,9 +64,10 @@ function Register() {
                     <Input error={errors.bio?.message} register={register} name="bio" placeholderText="Fale um pouco sobre você" children="Bio" type="text"/>
                     <Input error={errors.contact?.message} register={register} name="contact" placeholderText="Opção de contato" children="Contato" type="text"/>
                     <select {...register("course_module")}>
-                        <option value="M1">M1</option>
-                        <option value="M2">M2</option>
-                        <option value="M3">M3</option>
+                        <option value="Primeiro módulo (Introdução ao Frontend)">Primeiro módulo (Introdução ao Frontend)</option>
+                        <option value="Segundo módulo (Frontend Avançado)">Segundo módulo (Frontend Avançado)</option>
+                        <option value="Terceiro módulo (Introdução ao Backend)">Terceiro módulo (Introdução ao Backend)</option>
+                        <option value="Quarto módulo (Backend Avançado)">Quarto módulo (Backend Avançado)</option>
                     </select>
                     {/* <Select register={register} name="course_module" error={errors.course_module?.message}/> */}
                     <Button type="submit" bgColor={"--color-primary-Negative"}>Cadastrar</Button>
