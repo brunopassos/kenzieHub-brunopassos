@@ -12,7 +12,7 @@ function Routes() {
             <Route path="/register">
                 <Register />
             </Route>
-            <Route path="/dashboard">
+            <Route path="/dashboard/:id">
                 <Dashboard />
             </Route>
         </Switch>
