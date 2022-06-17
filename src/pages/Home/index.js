@@ -35,6 +35,7 @@ function Home() {
         return history.push(`/dashboard/${resp.data.user.name}`)
       })
       .catch((err) => {
+        toast.success(`Usuário não cadastrado`)
         console.log(err);
       });
   }
