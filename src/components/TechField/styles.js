@@ -6,11 +6,15 @@ export const StyledUl = styled.ul`
   overflow-y: auto;
   background-color: var(--gray3);
   border-radius: 4px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const StyledLi = styled.li`
   list-style: none;
-  width: 279px;
+  width: 90%;
   height: 48.73px;
   background-color: var(--gray4);
   margin: 12px 8px;
@@ -25,6 +29,9 @@ export const StyledLi = styled.li`
 
   div {
     width: 33%;
+    @media (min-width: 450px) {
+      justify-content: center;
+    }
   }
 
   div + div {
@@ -35,6 +42,10 @@ export const StyledLi = styled.li`
   div + div + div {
     display: flex;
     justify-content: end;
+
+    @media (min-width: 450px) {
+      justify-content: space-around;
+    }
   }
 
   div button {
@@ -45,6 +56,7 @@ export const StyledLi = styled.li`
     background-color: var(--gray4);
     border: none;
     color: var(--white);
+
   }
 
   div p {

@@ -33,6 +33,7 @@ export const StyledForm = styled.form`
     font-family: "Inter";
     font-weight: 500;
     font-size: 12.8347px;
+
   }
 `;
 
@@ -57,6 +58,10 @@ export const Container = styled.div`
       width: 55.49px;
       height: 32px;
       margin-bottom: 15px;
+
+      :hover{
+        background-color: var(--gray2);
+      }
     }
   }
 
@@ -72,7 +77,7 @@ export const Header = styled.section`
   border-top: 1px solid var(--gray0);
   display: flex;
   flex-direction: column;
-  width: 320px;
+  width: 100%;
   height: 131px;
   padding-top: 34px;
 
@@ -90,6 +95,11 @@ export const Header = styled.section`
     font-weight: 400;
     font-size: 12px;
   }
+
+  @media (min-width: 450px){
+    flex-direction: row;
+    justify-content: space-between;
+  }
 `;
 
 export const Content = styled.div`
@@ -106,11 +116,11 @@ export const Content = styled.div`
     height: 32px;
     background: var(--gray3);
     border: none;
+    color: var(--white);
+    font-size: 30px;
 
-    svg {
-      width: 32px;
-      height: 32px;
-      color: var(--white);
+    :hover{
+      background-color: var(--gray2);
     }
   }
 `;
