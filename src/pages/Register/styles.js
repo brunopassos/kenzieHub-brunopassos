@@ -82,6 +82,16 @@ export const Content = styled.form`
     flex-direction: column;
     align-items: center;
   }
+  select {
+    width: 265px;
+    height: 38.5px;
+    border: 0.9772px solid var(--gray0);
+    border-radius: 3.20867px;
+    background-color: var(--gray2);
+    color: var(--gray0);
+    padding-left: 10px;
+    margin-bottom: 20px;
+  }
 `;
 
 export const StyledHeader = styled.div`
