@@ -33,7 +33,6 @@ function Register() {
     });
 
     function onSubmitFunction(data){        
-        console.log(data)
 
         api
         .post("/users", data)

@@ -1,5 +1,41 @@
 import styled from "styled-components";
 
+export const StyledForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+
+  label {
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 9.772px;
+    color: var(--gray0);
+    margin-bottom: 20px;
+  }
+
+  input,
+  select {
+    width: 234.66px;
+    height: 38.5px;
+    border: 0.9772px solid var(--gray0);
+    border-radius: 3.20867px;
+    background-color: var(--gray2);
+    color: var(--gray0);
+    padding-left: 10px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    width: 234.9px;
+    height: 38.5px;
+    border: 1.2182px solid var(--color-primary);
+    border-radius: 4.06066px;
+    font-family: "Inter";
+    font-weight: 500;
+    font-size: 12.8347px;
+  }
+`;
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -24,7 +60,7 @@ export const Container = styled.div`
     }
   }
 
-  span{
+  span {
     font-family: "Inter";
     color: var(--gray1);
     font-weight: 400;
@@ -33,6 +69,7 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.section`
+  border-top: 1px solid var(--gray0);
   display: flex;
   flex-direction: column;
   width: 320px;
