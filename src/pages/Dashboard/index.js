@@ -35,11 +35,10 @@ function Dashboard() {
     })
   }, [techs]);
 
-
   const history = useHistory();
 
   const handleNavigation = (path) => {
-    localStorage.removeItem("token");
+    localStorage.clear();
     toast.success("Deslogado com sucesso.")
     return history.push(path);
   };
@@ -65,6 +64,8 @@ function Dashboard() {
         toast.error("Erro ao cadastrar, tente novamente!");
     });
   }
+
+  
 
   const styleDiv = {
     width: "100%",
