@@ -40,6 +40,8 @@ function Home() {
       });
   }
 
+  
+
   const history = useHistory();
 
   const handleNavigation = (path) => {
