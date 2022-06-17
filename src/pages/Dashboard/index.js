@@ -94,7 +94,7 @@ function Dashboard() {
         <Content>
             <span>Tecnologias</span>
             <button onClick={() => setOpen(!open)}>
-              <AiFillPlusSquare/>
+              +
             </button>
         </Content>
             <TechField techs={techs}/>
@@ -108,7 +108,8 @@ function Dashboard() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            padding: "0"
+            padding: "0",
+            width: "369px"
           },
           overlay: {
             background: "rgba(18, 18, 20, 0.5)"
