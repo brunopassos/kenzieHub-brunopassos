@@ -62,6 +62,7 @@ function Register() {
                     <Input error={errors.confirmPassword?.message} register={register} name="confirmPassword" placeholderText="Confirme a seua senha" children="Confirme a senha" type="password"/>
                     <Input error={errors.bio?.message} register={register} name="bio" placeholderText="Fale um pouco sobre você" children="Bio" type="text"/>
                     <Input error={errors.contact?.message} register={register} name="contact" placeholderText="Opção de contato" children="Contato" type="text"/>
+                    <label>Selecionar módulo</label>
                     <select {...register("course_module")}>
                         <option value="Primeiro módulo (Introdução ao Frontend)">Primeiro módulo (Introdução ao Frontend)</option>
                         <option value="Segundo módulo (Frontend Avançado)">Segundo módulo (Frontend Avançado)</option>
