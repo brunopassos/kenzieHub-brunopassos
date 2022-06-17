@@ -31,11 +31,11 @@ function Home() {
         console.log(resp)
         localStorage.setItem("token", resp.data.token);
         localStorage.setItem("id", resp.data.user.id);
-        toast.error(`Seja bem vindo(a) ${resp.data.user.name}`)
+        toast.success(`Seja bem vindo(a) ${resp.data.user.name}`)
         return history.push(`/dashboard/${resp.data.user.name}`)
       })
       .catch((err) => {
-        toast.success(`Usuário não cadastrado`)
+        toast.error(`Usuário não cadastrado`)
         console.log(err);
       });
   }
