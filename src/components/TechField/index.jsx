@@ -48,10 +48,9 @@ function TechField({ techs }) {
       resolver: yupResolver(schema),
   });
 
-  function onSubmitEdit(data){ 
-        
+  function onSubmitEdit(data){         
     api
-    .post(`/users/techs/${localStorage.getItem("id")}`, data)
+    .put(`/users/techs/${localStorage.getItem("id")}`, data)
     .then((_) => {
         toast.success("Tecnologia atualizada com sucesso!");
         setOpen(!open);
