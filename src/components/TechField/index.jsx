@@ -8,8 +8,11 @@ import { toast } from "react-toastify";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup"
 import { useForm } from "react-hook-form";
+import { useEffect } from "react";
 
 function TechField({ techs }) {
+
+  
 
   function deleteTech(id) {
 
@@ -32,7 +35,7 @@ function TechField({ techs }) {
 
     localStorage.setItem("title", tech[0].title);
     localStorage.setItem("status", tech[0].status);
-    localStorage.setItem("id", tech[0].id);
+    localStorage.setItem("techId", tech[0].id);
 
   }
 
@@ -50,7 +53,7 @@ function TechField({ techs }) {
 
   function onSubmitEdit(data){         
     api
-    .put(`/users/techs/${localStorage.getItem("id")}`, data)
+    .put(`/users/techs/${localStorage.getItem("techId")}`, data)
     .then((_) => {
         toast.success("Tecnologia atualizada com sucesso!");
         setOpen(!open);
@@ -146,7 +149,7 @@ function TechField({ techs }) {
           </select>
           <div>
             <Button type="submit" bgColor={"--color-primary"}>Salvar alterações</Button>
-            <Button type="submit" bgColor={"--gray1"} onClick={() => deleteTech(localStorage.getItem("id"))}>Excluir</Button>
+            <Button type="submit" bgColor={"--gray1"} onClick={() => deleteTech(localStorage.getItem("techId"))}>Excluir</Button>
           </div>
         </StyledForm>
       </ReactModal>
