@@ -8,7 +8,6 @@ import { toast } from "react-toastify";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup"
 import { useForm } from "react-hook-form";
-import { useEffect } from "react";
 
 function TechField({ techs }) {
 
@@ -121,7 +120,7 @@ function TechField({ techs }) {
             flexDirection: "column",
             alignItems: "center",
             padding: "0",
-            width: "369px"
+            width: "295px"
           },
           overlay: {
             background: "rgba(18, 18, 20, 0.5)",

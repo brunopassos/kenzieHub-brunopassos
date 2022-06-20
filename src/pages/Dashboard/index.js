@@ -54,7 +54,11 @@ function Dashboard() {
 
   function onSubmitFunction(data){ 
     api
-    .post("/users/techs", data)
+    .post("/users/techs", {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem(JSON.parse("token"))}`
+      }
+    }, data)
     .then((_) => {
         toast.success("Tecnologia cadastrada com sucesso!");
         setOpen(!open);
@@ -109,7 +113,7 @@ function Dashboard() {
             flexDirection: "column",
             alignItems: "center",
             padding: "0",
-            width: "369px"
+            width: "295px"
           },
           overlay: {
             background: "rgba(18, 18, 20, 0.5)"
