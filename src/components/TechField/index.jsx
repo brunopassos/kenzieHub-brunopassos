@@ -19,8 +19,13 @@ function TechField({ techs }) {
       setOpen(false);
     }
 
+    //Adicionar o headers no delete
     api
-      .delete(`users/techs/${id}`)
+      .delete(`users/techs/${id}`, {
+        headers: {
+          'authorization': `Bearer ${JSON.parse(localStorage.getItem("token"))}`
+        }
+      })
       .then((_) => toast.success("Tech deletada com sucesso."))
       .catch((err) => console.log(err));
   }
@@ -52,7 +57,11 @@ function TechField({ techs }) {
 
   function onSubmitEdit(data){         
     api
-    .put(`/users/techs/${localStorage.getItem("techId")}`, data)
+    .put(`/users/techs/${localStorage.getItem("techId")}`, data, {
+      headers: {
+        'authorization': `Bearer ${JSON.parse(localStorage.getItem("token"))}`
+      }
+    })
     .then((_) => {
         toast.success("Tecnologia atualizada com sucesso!");
         setOpen(!open);
@@ -80,7 +89,7 @@ function TechField({ techs }) {
 
   return (
     <div>
-      {!techs ? (
+      {techs.length === 0 ? (
         <span>Clique no + e cadastre as suas tecnologias!</span>
       ) : (
         <StyledUl>

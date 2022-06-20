@@ -53,12 +53,13 @@ function Dashboard() {
   });
 
   function onSubmitFunction(data){ 
+    console.log(data)
     api
-    .post("/users/techs", {
+    .post("/users/techs", data, {
       headers: {
-        'Authorization': `Bearer ${localStorage.getItem(JSON.parse("token"))}`
+        'authorization': `Bearer ${JSON.parse(localStorage.getItem("token"))}`
       }
-    }, data)
+    })
     .then((_) => {
         toast.success("Tecnologia cadastrada com sucesso!");
         setOpen(!open);

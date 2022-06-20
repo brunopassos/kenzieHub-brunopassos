@@ -28,7 +28,6 @@ function Home() {
     api
       .post("/sessions", data)
       .then((resp) => {
-        console.log(resp.data.token)
         localStorage.setItem("token", JSON.stringify(resp.data.token));
         localStorage.setItem("id", resp.data.user.id);
         toast.success(`Seja bem vindo(a) ${resp.data.user.name}`)
