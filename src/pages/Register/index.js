@@ -21,7 +21,7 @@ function Register() {
     const schema = yup.object().shape({
         name: yup.string().required("Campo obrigatório").min(3, "Mínimo de 3 letras"),
         email: yup.string().required("Campo obrigatório").email(),
-        password: yup.string().required("Campo obrigatório"),
+        password: yup.string().required("Campo obrigatório").min(6,"Mínimo de 6 caracteres"),
         confirmPassword: yup.string().required("Campo obrigatório").oneOf([yup.ref("password")],"As senhas não conferem"),
         bio: yup.string().required("Campo obrigatório"),
         contact: yup.string().required("Campo obrigatório"),
