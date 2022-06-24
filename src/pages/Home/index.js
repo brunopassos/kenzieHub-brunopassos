@@ -13,7 +13,7 @@ function Home() {
 
   const schema = yup.object().shape({
     email: yup.string().required("Campo obrigatório").email(),
-    password: yup.string().required("Campo obrigatório"),
+    password: yup.string().required("Campo obrigatório").min(6,"Mínimo de 6 caracteres"),
   });
 
   const {
