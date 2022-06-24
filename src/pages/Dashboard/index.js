@@ -6,7 +6,6 @@ import api from "../../services/api";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
-import { AiFillPlusSquare } from "react-icons/ai";
 import { useEffect } from "react";
 import TechField from "../../components/TechField";
 import ReactModal from 'react-modal';
@@ -14,6 +13,7 @@ import Input from "../../components/Input";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup"
 import { useForm } from "react-hook-form";
+import  Users from "../../components/Users";
 
 
 
@@ -21,6 +21,7 @@ function Dashboard() {
 
   const [open, setOpen] = useState(false);  
   const [techs, setTechs] = useState([]);
+  const [usersModal, setUsersModal] = useState(false);
 
   const params = useParams();
 
@@ -70,8 +71,6 @@ function Dashboard() {
     });
   }
 
-  
-
   const styleDiv = {
     width: "100%",
     display: "flex",
@@ -90,6 +89,7 @@ function Dashboard() {
       <Container>
         <div>
           <Logo margin="0"/>
+          <Button onClick={()=>setUsersModal(!usersModal)} textColor={"--gray0"} bgColor={"--gray3"}>Users</Button>
           <Button onClick={handleNavigation} path="/" textColor={"--gray0"} bgColor={"--gray3"}>Sair</Button>
         </div>
         <Header>
@@ -136,6 +136,7 @@ function Dashboard() {
           <Button bgColor={"--color-primary"}>Cadastrar Tecnologia</Button>
         </StyledForm>
       </ReactModal>
+      <Users setUsersModal={setUsersModal} usersModal={usersModal}/>
     </>
   );
 }

@@ -5,4 +5,5 @@ export const StyledButton = styled.button`
     color: var(${(props) => props.textColor ? props.textColor : "--white"});
     border-radius: 4.06066px;
     border: none;
+    margin: 10px;
 `
