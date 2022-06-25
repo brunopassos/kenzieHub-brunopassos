@@ -97,6 +97,7 @@ export const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
   padding-top: 10px;
+  align-items: center;
 
   label {
     margin-bottom: 15px;
@@ -105,6 +106,7 @@ export const StyledForm = styled.form`
     font-weight: 400;
     font-size: 9.73899px;
     color: var(--gray0);
+    width: 90%;
   }
 
   select {

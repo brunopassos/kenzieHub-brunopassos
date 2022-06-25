@@ -4,6 +4,8 @@ export const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
   padding-top: 10px;
+  align-items: center;
+
 
   label {
     font-family: "Inter";
@@ -11,6 +13,7 @@ export const StyledForm = styled.form`
     font-size: 9.772px;
     color: var(--gray0);
     margin-bottom: 20px;
+    width: 90%;
   }
 
   input,
