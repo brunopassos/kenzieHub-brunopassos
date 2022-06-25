@@ -1,42 +1,55 @@
-import ReactModal from 'react-modal';
-import Button from '../Button';
-import { useSelector } from 'react-redux';
+import ReactModal from "react-modal";
+import Button from "../Button";
+import { useSelector } from "react-redux";
+import UserCard from "../UserCard";
+import { StyledUl, Title } from "./styles"
 
-function Users({setUsersModal, usersModal}) {  
+function Users({ setUsersModal, usersModal }) {
+  const users = useSelector(({ users }) => users);
 
-    const users = useSelector(({users}) => users)
-
-    return ( 
-        <ReactModal portalClassName="modal" isOpen={usersModal} onRequestClose={() => setUsersModal(!usersModal)} ariaHideApp={false}
-        style={{
-          content: {
-            backgroundColor: "var(--gray3)",
-            height: "90vh",
-            margin: "auto",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            padding: "0",
-            width: "295px",
-            overflow: 'scroll'
-          },
-          overlay: {
-            background: "rgba(18, 18, 20, 0.5)",
+  return (
+    <ReactModal
+      portalClassName="modal"
+      isOpen={usersModal}
+      onRequestClose={() => setUsersModal(!usersModal)}
+      ariaHideApp={false}
+      style={{
+        content: {
+          backgroundColor: "var(--gray3)",
+          height: "90vh",
+          margin: "auto",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          padding: "0",
+          width: "295px",
+          overflowY: "auto",
+        },
+        overlay: {
+          background: "rgba(18, 18, 20, 0.5)",
+        },
+      }}
+    >
+      <div>
+        <Title>Usuários</Title>
+        <Button
+          bgColor={"--white"}
+          textColor={"--black"}
+          onClick={() => setUsersModal(!usersModal)}
+          width={"50"}
+        >
+          x
+        </Button>
+      </div>
+      <StyledUl>
+        {users.map((user) => {
+          if (user.id !== localStorage.getItem("id")) {
+            return <UserCard user={user}/>;
           }
-        }}
-      >        
-        <div >
-          <span>Usuários</span>
-          <Button bgColor={"--gray2"} textColor={"--gray1"} onClick={() => setUsersModal(!usersModal)}>x</Button>
-        </div>
-        <ul>
-            {users.map((user)=>{
-                return <li key={user.id}>{user.name}</li>
-            })}
-        </ul>
-        
-      </ReactModal>
-     );
+        })}
+      </StyledUl>
+    </ReactModal>
+  );
 }
 
 export default Users;

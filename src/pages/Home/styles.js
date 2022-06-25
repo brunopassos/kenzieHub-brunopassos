@@ -51,6 +51,7 @@ export const Content = styled.form`
   max-width: 369px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   input {
     width: 264.66px;
@@ -72,6 +73,7 @@ export const Content = styled.form`
     font-size: 9.772px;
     font-family: "Inter";
     margin-bottom: 18px;
+    width: 90%;
   }
 
   button {

@@ -15,18 +15,14 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import Users from "../../components/Users";
 import { useDispatch } from "react-redux";
-import { getUsers } from "../../store/modules/users/actions";
+import getUsersThunk from "../../store/modules/users/thunks";
 
 function Dashboard() {
   const dispatch = useDispatch();
 
   function getUsersFunction() {
     setUsersModal(!usersModal);
-
-    api
-      .get(`/users`)
-      .then((resp) => dispatch(getUsers(resp.data)))
-      .catch((err) => console.log(err));
+    dispatch(getUsersThunk())
   }
 
   const [open, setOpen] = useState(false);

@@ -1,8 +1,8 @@
 import { StyledButton } from "./styles";
 
-function Button({onClick, path, children, bgColor, textColor, type}) {
+function Button({onClick, path, children, bgColor, textColor, type, width}) {
     return ( 
-        <StyledButton onClick={() => onClick && onClick(path)} type={type} bgColor={bgColor} textColor={textColor}>{children}</StyledButton>
+        <StyledButton width={width} onClick={() => onClick && onClick(path)} type={type} bgColor={bgColor} textColor={textColor}>{children}</StyledButton>
      );
 }
 
