@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+[PT-BR / EN]
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## [PT-BR]
 
-## Available Scripts
+<h1>KenzieHub</h1> 
 
-In the project directory, you can run:
 
-### `yarn start`
+https://user-images.githubusercontent.com/26532465/182039009-39a1a9b8-fb9b-423a-bef2-6f964c6f30d7.mp4
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Status: Finalizado
 
-### `yarn test`
+## Sobre este projeto
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+O KenzieHub é uma plataforma para gerenciar a evolução das habilidades em tecnologias, o usuário pode adicionar, editar e remover tecnologias aprendidas e que estão em desenvolvimento.
 
-### `yarn build`
+## Instalação 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+O que acha de testar a nossa aplicação? Siga os passos abaixo:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1) Faça o clone da branch ```main``` para o teu computador.
+2) Abra a aplicação na sua IDE de preferência.
+3) No terminal, rode o comando ```yarn``` para instalar todas as dependências.
+4) Rode o comando ```yarn start``` para executar a aplicação no seu navegador.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Você também pode conferir clicando [aqui](https://kenziehub-brunopassos.vercel.app/).
 
-### `yarn eject`
+## Funcionalidades
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Cadastro de usuário
+  
+- Login
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Adicionar, editar e remover tecnologias
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Stack
 
-## Learn More
++ ReactJs
++ Material UI
++ Styled-components
++ Yup
++ Hook-form
++ Axios
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## [EN]
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Status: Finished
 
-### Analyzing the Bundle Size
+## About this project
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+KenzieHub is a platform to manage the evolution of skills in technologies, the user can add, edit and remove technologies learned and under development.
 
-### Making a Progressive Web App
+## Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+What do you think about testing our application? Follow the steps below:
 
-### Advanced Configuration
+1) Clone the ```main``` branch to your computer.
+2) Open the application in your preferred IDE.
+3) In the terminal, run the command ```yarn``` to install all dependencies.
+4) Run the command ```yarn start``` to run the application in your browser.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+You can also check it out by clicking [here](https://kenziehub-brunopassos.vercel.app/).
 
-### Deployment
+## Functionalities
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- User registration
+  
+- Login
 
-### `yarn build` fails to minify
+- Add, edit and remove technologies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Stack
+
++ ReactJs
++ Material UI
++ Styled-components
++ Yup
++ Hook-form
++ Axios
